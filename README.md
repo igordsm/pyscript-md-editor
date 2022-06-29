@@ -1,9 +1,9 @@
-## Editor de Markdown em Python
+## Markdown editor in PyScript
 
-Este é um exemplo de utilização de [PyScript](https://pyscript.net/) para a criação de uma aplicação web simples. Alguns pontos de destaque são
+This is an example of using [PyScript](https://pyscript.net/) to create a simple webapp. Some highlights:
 
-1. utilização sem modificações do módulo [markdown](https://github.com/Python-Markdown/markdown/) para conversão markdown -> HTML
-2. utilização de APIs do browser (`setInterval`) e acesso a DOM
-3. persistência de dados usando a API [`FS`](https://emscripten.org/docs/api_reference/Filesystem-API.html) do emscripten
+1. uses the [markdown](https://github.com/Python-Markdown/markdown/) module to convert markdown -> HTML
+2. uses browser APIs (`setInterval`) and modifies the DOM
+3. persists virtual filesystem data using emscripten's [`FS`](https://emscripten.org/docs/api_reference/Filesystem-API.html) API
 
-Acesse [https://igordsm.github.io/pyscript-md-editor/](https://igordsm.github.io/pyscript-md-editor/) para ver uma versão funcional.
+Live demo at [https://igordsm.github.io/pyscript-md-editor/](https://igordsm.github.io/pyscript-md-editor/)
