@@ -15,10 +15,11 @@ def do_convert(source, target, converter):
     pyodide_js.FS.syncfs(to_js(lambda e: console.log(e)))
 
 
-def load_existing_data(source, e):
+def load_existing_data(source, target, converter, e):
     try:
         with open('data/teste.txt') as f:
             source.value = f.read()
+            do_convert(source, target, converter)
     except:
         console.log('não existe!!!')
 
@@ -33,7 +34,7 @@ def init():
     pyodide_js.FS.mkdir('data')
     pyodide_js.FS.mount(pyodide_js.FS.filesystems.IDBFS, {}, '/home/pyodide/data/')
 
-    pyodide_js.FS.syncfs(True, to_js(lambda e: load_existing_data(source, e)))
+    pyodide_js.FS.syncfs(True, to_js(lambda e: load_existing_data(source, target, converter, e)))
 
 
 init()
